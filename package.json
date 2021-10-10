@@ -1,0 +1,42 @@
+{
+  "name": "svelte-focus-key",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Svelte component and action to focus an element when pressing a key",
+  "author": "Eric Liu (https://github.com/metonym)",
+  "svelte": "./src/index.js",
+  "main": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "rollup -cw",
+    "prepack": "rollup -c",
+    "predeploy": "rollup -c",
+    "deploy": "gh-pages -d dist",
+    "test": "svelte-check --workspace test"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "svelte": "^3.43.1",
+    "svelte-check": "^2.2.7",
+    "svelte-readme": "^3.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metonym/svelte-focus-key"
+  },
+  "homepage": "https://github.com/metonym/svelte-focus-key",
+  "bugs": "https://github.com/metonym/svelte-focus-key/issues",
+  "keywords": [
+    "svelte",
+    "svelte component",
+    "svelte action",
+    "keydown",
+    "focus",
+    "search"
+  ],
+  "files": [
+    "src",
+    "types"
+  ]
+}
