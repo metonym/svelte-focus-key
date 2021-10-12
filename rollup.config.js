@@ -14,5 +14,5 @@ export default svelteReadme({
       outline: #0f62fe solid 2px;
       outline-offset: -2px;
     }
-  `
+  `,
 });

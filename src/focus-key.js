@@ -3,9 +3,9 @@
  * @param {{ key?: string; }} [options]
  */
 export function focusKey(element, options = {}) {
-  const key = options.key || '/';
+  const key = options.key || "/";
 
-  const handleKeydown = e => {
+  const handleKeydown = (e) => {
     if (
       e.key === key &&
       element != null &&
@@ -15,13 +15,13 @@ export function focusKey(element, options = {}) {
       e.preventDefault();
       element.focus();
     }
-  }
+  };
 
-  document.body.addEventListener('keydown', handleKeydown)
+  document.body.addEventListener("keydown", handleKeydown);
 
   return {
     destroy() {
-      document.body.removeEventListener('keydown', handleKeydown)
-    }
-  }
+      document.body.removeEventListener("keydown", handleKeydown);
+    },
+  };
 }
