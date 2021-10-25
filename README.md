@@ -50,12 +50,14 @@ The default focus key is the forward slash (`/`). Customize the key using the `k
 
 ```svelte
 <script>
-  let element2;
+  import FocusKey from "svelte-focus-key";
+
+  let textarea;
 </script>
 
-<input bind:this={element2} placeholder={'Press "s" to focus'} />
+<textarea bind:this={textarea} placeholder={'Press "s" to focus'} />
 
-<FocusKey element={element2} key="s" />
+<FocusKey element={textarea} key="s" />
 ```
 
 ### focusKey action
