@@ -6,7 +6,7 @@
 
 <!-- REPO_URL -->
 
-The primary use case for this utility is to focus a search input when pressing the "/" key.
+The primary use case is to focus a search input when pressing the forward slash key ("/").
 
 ---
 
@@ -24,6 +24,12 @@ yarn add -D svelte-focus-key
 
 ```bash
 npm i -D svelte-focus-key
+```
+
+**pnpm**
+
+```bash
+pnpm i -D svelte-focus-key
 ```
 
 ## Usage
