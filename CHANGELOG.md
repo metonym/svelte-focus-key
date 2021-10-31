@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - support a combination of keys (e.g., "command + k")
 - support option to customize selected text range
 
-## [0.1.0](https://github.com/metonym/svelte-focus-key/releases/tag/v0.1.0) - 2021-MM-DD
+## [0.1.1](https://github.com/metonym/svelte-focus-key/releases/tag/v0.1.1) - 2021-10-31
+
+- remove `update` key from `focus-key.d.ts`
+
+## [0.1.0](https://github.com/metonym/svelte-focus-key/releases/tag/v0.1.0) - 2021-10-10
 
 - Initial release
