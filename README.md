@@ -66,7 +66,7 @@ The default focus key is the forward slash (`/`). Customize the key using the `k
 <FocusKey element={textarea} key="s" />
 ```
 
-### focusKey action
+### `focusKey` action
 
 This utility is also available as a [Svelte action](https://svelte.dev/docs#use_action).
 
@@ -82,10 +82,10 @@ This utility is also available as a [Svelte action](https://svelte.dev/docs#use_
 
 ### Props
 
-| Prop name | Type          | Default value |
-| :-------- | :------------ | :------------ |
-| element   | `HTMLElement` | `null`        |
-| key       | `string`      | `"/"`         |
+| Name    | Type          | Default value |
+| :------ | :------------ | :------------ |
+| element | `HTMLElement` | `null`        |
+| key     | `string`      | `"/"`         |
 
 ## TypeScript
 
