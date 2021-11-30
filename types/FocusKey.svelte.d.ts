@@ -13,6 +13,12 @@ export interface FocusKeyProps {
    * @default "/"
    */
   key?: string;
+
+  /**
+   * Set to `true` to select text in the element when focused
+   * @default false
+   */
+  selectText?: boolean;
 }
 
 export default class extends SvelteComponentTyped<FocusKeyProps, {}, {}> {}

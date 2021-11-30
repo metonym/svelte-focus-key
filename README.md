@@ -34,7 +34,7 @@ pnpm i -D svelte-focus-key
 
 ## Usage
 
-### Basic
+### `FocusKey` component
 
 Use the [bind:this](https://svelte.dev/docs#bind_element) directive to pass the element to focus to the `FocusKey` component.
 
@@ -66,6 +66,26 @@ The default focus key is the forward slash (`/`). Customize the key using the `k
 <FocusKey element={textarea} key="s" />
 ```
 
+### Select text on focus
+
+Set `selectText` to `true` to select the text in the element when focusing.
+
+```svelte
+<script>
+  import FocusKey from "svelte-focus-key";
+
+  let input;
+</script>
+
+<input
+  bind:this={input}
+  value={'Press "e" to focus'}
+  placeholder={'Press "e" to focus'}
+/>
+
+<FocusKey element={input} key="e" selectText />
+```
+
 ### `focusKey` action
 
 This utility is also available as a [Svelte action](https://svelte.dev/docs#use_action).
@@ -82,10 +102,11 @@ This utility is also available as a [Svelte action](https://svelte.dev/docs#use_
 
 ### Props
 
-| Name    | Description                       | Type          | Default value |
-| :------ | :-------------------------------- | :------------ | :------------ |
-| element | HTML Element to focus             | `HTMLElement` | `null`        |
-| key     | Key to trigger focus when pressed | `string`      | `"/"`         |
+| Name       | Description                       | Type          | Default value |
+| :--------- | :-------------------------------- | :------------ | :------------ |
+| element    | HTML element to focus             | `HTMLElement` | `null`        |
+| key        | Key to trigger focus when pressed | `string`      | `"/"`         |
+| selectText | Select element text when focusing | `boolean`     | `false`       |
 
 ## TypeScript
 

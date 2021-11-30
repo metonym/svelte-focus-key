@@ -2,7 +2,7 @@ import { FocusKeyProps } from "./FocusKey.svelte";
 
 export function focusKey(
   element: HTMLElement,
-  options?: Pick<FocusKeyProps, "key">
+  options?: Omit<FocusKeyProps, "element">
 ): {
   destroy: () => void;
 };

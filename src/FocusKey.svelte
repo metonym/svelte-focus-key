@@ -9,6 +9,11 @@
    * Specify the key to trigger the element focus
    */
   export let key = "/";
+
+  /**
+   * Set to `true` to select text in the element when focused
+   */
+  export let selectText = false;
 </script>
 
 <svelte:body
@@ -21,5 +26,6 @@
     ) {
       e.preventDefault();
       element.focus();
+      if (selectText) element.select();
     }
   }} />

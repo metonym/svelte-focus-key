@@ -1,9 +1,10 @@
 /**
  * @param {HTMLElement} element
- * @param {{ key?: string; }} [options]
+ * @param {{ key?: string; selectText?: boolean; }} [options]
  */
 export function focusKey(element, options = {}) {
   const key = options.key || "/";
+  const selectText = options.selectText === true;
 
   const handleKeydown = (e) => {
     if (
@@ -14,6 +15,7 @@ export function focusKey(element, options = {}) {
     ) {
       e.preventDefault();
       element.focus();
+      if (selectText) element.select();
     }
   };
 
