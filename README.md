@@ -102,11 +102,11 @@ This utility is also available as a [Svelte action](https://svelte.dev/docs#use_
 
 ### Props
 
-| Name       | Type          | Default value |
-| :--------- | :------------ | :------------ |
-| element    | `HTMLElement` | `null`        |
-| key        | `string`      | `"/"`         |
-| selectText | `boolean`     | `false`       |
+| Name       | Description                       | Type          | Default value |
+| :--------- | :-------------------------------- | :------------ | :------------ |
+| element    | HTML element to focus             | `HTMLElement` | `null`        |
+| key        | Key to trigger focus when pressed | `string`      | `"/"`         |
+| selectText | Select element text when focusing | `boolean`     | `false`       |
 
 ## TypeScript
 
