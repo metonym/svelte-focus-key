@@ -102,10 +102,11 @@ This utility is also available as a [Svelte action](https://svelte.dev/docs#use_
 
 ### Props
 
-| Name    | Type          | Default value |
-| :------ | :------------ | :------------ |
-| element | `HTMLElement` | `null`        |
-| key     | `string`      | `"/"`         |
+| Name       | Type          | Default value |
+| :--------- | :------------ | :------------ |
+| element    | `HTMLElement` | `null`        |
+| key        | `string`      | `"/"`         |
+| selectText | `boolean`     | `false`       |
 
 ## TypeScript
 
