@@ -8,11 +8,11 @@
 <input bind:this={element} />
 
 <!-- svelte-ignore missing-declaration -->
-<FocusKey {element} key="s" />
+<FocusKey {element} key="s" selectText />
 
 <!-- svelte-ignore missing-declaration -->
 <FocusKeyDirectImport {element} />
 
 <input use:focusKey />
 
-<input use:focusKey={{ key: "s" }} />
+<input use:focusKey={{ key: "s", selectText: true }} />
