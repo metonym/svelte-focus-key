@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - support a combination of keys (e.g., "command + k")
 - support option to customize selected text range
 
+## [0.2.2](https://github.com/metonym/svelte-focus-key/releases/tag/v0.2.2) - 2021-12-14
+
+- do not use subpath exports for `exports` field
+
 ## [0.2.1](https://github.com/metonym/svelte-focus-key/releases/tag/v0.2.1) - 2021-12-14
 
 - specify `exports.import` entry in `package.json`
