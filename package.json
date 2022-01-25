@@ -1,6 +1,6 @@
 {
   "name": "svelte-focus-key",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "license": "MIT",
   "description": "Svelte component and action to focus an element when pressing a key",
   "author": "Eric Liu (https://github.com/metonym)",
