@@ -1,18 +1,14 @@
 <script lang="ts">
   import FocusKey, { focusKey } from "../types";
-  import FocusKeyDirectImport from "../types/FocusKey.svelte";
+  import FocusKeyDirectImport, {
+    FocusKeyProps,
+  } from "../types/FocusKey.svelte";
 
   let element: HTMLInputElement;
+  let key: FocusKeyProps["key"] = ["s"];
 </script>
 
 <input bind:this={element} />
-
-<!-- svelte-ignore missing-declaration -->
 <FocusKey {element} key="s" selectText />
-
-<!-- svelte-ignore missing-declaration -->
-<FocusKeyDirectImport {element} />
-
-<input use:focusKey />
-
-<input use:focusKey={{ key: "s", selectText: true }} />
+<FocusKeyDirectImport {element} {key} />
+<input use:focusKey={{ key: ["s"], selectText: true }} />

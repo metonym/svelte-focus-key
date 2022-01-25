@@ -1,14 +1,15 @@
 /**
  * @param {HTMLElement} element
- * @param {{ key?: string; selectText?: boolean; }} [options]
+ * @param {{ key?: string | string[]; selectText?: boolean; }} [options]
  */
 export function focusKey(element, options = {}) {
   const key = options.key || "/";
+  const keys = Array.isArray(key) ? key : [key]
   const selectText = options.selectText === true;
 
   const handleKeydown = (e) => {
     if (
-      e.key === key &&
+      keys.some((key) => key === e.key) &&
       element != null &&
       document.activeElement.tagName === "BODY" &&
       document.activeElement !== element

@@ -12,7 +12,7 @@ export interface FocusKeyProps {
    * Specify the key to trigger the element focus
    * @default "/"
    */
-  key?: string;
+  key?: string | string[];
 
   /**
    * Set to `true` to select text in the element when focused

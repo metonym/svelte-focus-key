@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - dispatched events "focus", "afterfocus"
 - support a combination of keys (e.g., "command + k")
-- support multiple keys (e.g., `["s", "/"]`)
 - support option to customize selected text range (select all vs. cursor at end)
 
 ## [0.2.4](https://github.com/metonym/svelte-focus-key/releases/tag/v0.2.4) - 2021-12-15
