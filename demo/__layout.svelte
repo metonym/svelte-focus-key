@@ -1,5 +1,5 @@
 <script>
-  import "github-markdown-css";
+  import "github-markdown-css/github-markdown-light.css";
 </script>
 
 <main class="markdown-body">
