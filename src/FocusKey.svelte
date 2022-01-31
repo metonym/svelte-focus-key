@@ -1,18 +1,16 @@
-<script>
+<script lang="ts">
   /**
-   * Specify the element to focus
-   * @type {HTMLElement}
+   * Specify the element to focus.
    */
-  export let element = null;
+  export let element: null | HTMLInputElement | HTMLTextAreaElement = null;
 
   /**
-   * Specify the key to trigger the element focus
-   * @type {string | string[]}
+   * Specify the key(s) to trigger the element focus.
    */
-  export let key = "/";
+  export let key: string | string[] = "/";
 
   /**
-   * Set to `true` to select text in the element when focused
+   * Set to `true` to select text in the element when focused.
    */
   export let selectText = false;
 
@@ -24,7 +22,7 @@
     if (
       keys.some((key) => key === e.key) &&
       element != null &&
-      document.activeElement.tagName === "BODY" &&
+      document.activeElement?.tagName === "BODY" &&
       document.activeElement !== element
     ) {
       e.preventDefault();
