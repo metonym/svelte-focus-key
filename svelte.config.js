@@ -5,7 +5,7 @@ export default createConfig({
   name: "svelte-focus-key",
   kit: {
     paths: {
-      base: "/svelte-focus-key",
+      base: process.env.NODE_ENV === 'production' ? "/svelte-focus-key" : '',
     },
   },
   adapter: adapter(),
