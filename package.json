@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "deploy": "yarn build && gh-pages -d build",
+    "deploy": "yarn build && touch build/.nojekyll && gh-pages -d build -t true",
     "package": "svelte-kit package",
     "test": "svelte-check --workspace test"
   },

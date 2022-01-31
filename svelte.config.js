@@ -3,6 +3,11 @@ import { createConfig } from "sveldoc";
 
 export default createConfig({
   name: "svelte-focus-key",
+  kit: {
+    paths: {
+      base: "/svelte-focus-key",
+    },
+  },
   adapter: adapter(),
   files: {
     lib: "src",
