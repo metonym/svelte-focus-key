@@ -439,10 +439,10 @@ make-dir@^3.0.2:
   dependencies:
     semver "^6.0.0"
 
-mdsvex@^0.9.8:
-  version "0.9.8"
-  resolved "https://registry.yarnpkg.com/mdsvex/-/mdsvex-0.9.8.tgz#f430988b86c4d9080381de2fbe54326c046487bc"
-  integrity sha512-5QvThjRKoKkGH00qdHxLZ5ROd80RgGiJvM2B9opeFreaiGFTLoKKFUgEBCslLrwM24cVGJLmIM3rR83OFDf3tQ==
+mdsvex@^0.10.5:
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/mdsvex/-/mdsvex-0.10.5.tgz#a8b905d2ff8fbff17fc3c8cfa8c4475ec6d8fb24"
+  integrity sha512-/B23WZn5Vjrjh7Qp2YsOXLkU9YFm59IEylKNXC10o05ZaCP4LNv32tGXKP6aEssss6hk/LdISJuneELHFIS2pQ==
   dependencies:
     "@types/unist" "^2.0.3"
     prism-svelte "^0.4.7"
@@ -687,10 +687,12 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-sveldoc@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/sveldoc/-/sveldoc-0.1.0.tgz#5b73b76b9555a1fee83b6d728224782bc2270a0b"
-  integrity sha512-eMrZUpvBzG0ZaCt7fYtUkcI5E0qYj+CXVtcLSK/nH3xleRsXYrfpXB/rW/2pFlhcRsiZCYahDsU93ut3MepaSA==
+sveldoc@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/sveldoc/-/sveldoc-0.2.0.tgz#5bad9f65d7df7ff98907f6c8e2ead66e5edf7ade"
+  integrity sha512-7rJKX0ZukWnsr6Vt4IooPfpGuwrgyv1pM2OLDPkTLD20bfwmK35YdokumykM14beb50tD84BjyN7LgMjDXNUVQ==
+  dependencies:
+    mdsvex "^0.10.5"
 
 svelte-hmr@^0.14.9:
   version "0.14.9"
@@ -709,10 +711,10 @@ svelte-preprocess@^4.10.2:
     sorcery "^0.10.0"
     strip-indent "^3.0.0"
 
-svelte2tsx@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.5.0.tgz#ca0f558d7ab28203d24056f3ab65b9005c124ad6"
-  integrity sha512-pgMMPzPylwzb/XTLXZQ0y6LUlYzVTep4537NJzHNyTbML864pfVS27iVFOgUK7XmKLyuIdG7tgweUZTsIwgKHw==
+svelte2tsx@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.5.1.tgz#9c2529d801fbbdb6d4daa81841c623aed7d56674"
+  integrity sha512-pTOdXj2LbjkIdwaMrTtdwW9QbUpZQO4bs2v4n8fHmOft6cyD/wKD1C/InKC0lAC7CuqPuoR1RaJh+FJ0h7kj1A==
   dependencies:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
