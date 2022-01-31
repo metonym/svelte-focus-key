@@ -1,12 +1,12 @@
 name: CI
-on: [push, pull_request]
+on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies and build the library
+      - name: Build and package the library
         run: |
           yarn
-      - name: Validate the TypeScript definitions
-        run: yarn test
+          yarn build
+          yarn package
