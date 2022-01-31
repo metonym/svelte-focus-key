@@ -1,1 +1,156 @@
- <!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <meta name="description" content="Svelte component and action to focus an element when pressing a key"> <title>svelte-focus-key</title> <style>.anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.anchor:focus{outline:0}h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover .anchor,h5:hover .anchor,h6:hover .anchor{text-decoration:none}main{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:1.5;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;word-wrap:break-word}details{display:block}summary{display:list-item}a{background-color:initial}a:active,a:hover{outline-width:0}strong{font-weight:inherit;font-weight:bolder}h1{font-size:2em;margin:.67em 0}img{border-style:none}code,kbd,pre{font-family:monospace,monospace;font-size:1em}hr{box-sizing:initial;height:0;overflow:visible}input{font:inherit;margin:0}input{overflow:visible}[type=checkbox]{box-sizing:border-box;padding:0}*{box-sizing:border-box}input{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}strong{font-weight:600}hr{height:0;margin:15px 0;overflow:hidden;background:0 0;border:0;border-bottom:1px solid #dfe2e5}hr:after,hr:before{display:table;content:""}hr:after{clear:both}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}details summary{cursor:pointer}kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0}h1{font-size:32px}h1,h2{font-weight:600}h2{font-size:24px}h3{font-size:20px}h3,h4{font-weight:600}h4{font-size:16px}h5{font-size:14px}h5,h6{font-weight:600}h6{font-size:12px}p{margin-top:0;margin-bottom:10px}blockquote{margin:0}ol,ul{padding-left:0;margin-top:0;margin-bottom:0}ol ol,ul ol{list-style-type:lower-roman}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-alpha}dd{margin-left:0}code,pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}pre{margin-top:0;margin-bottom:0}input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{margin:0;-webkit-appearance:none;appearance:none}:checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}hr{border-bottom-color:#eee}kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}.markdown-body:before,main:after{display:table;content:""}main:after{clear:both}main>:first-child{margin-top:0!important}main>:last-child{margin-bottom:0!important}a:not([href]){color:inherit;text-decoration:none}blockquote,details,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}h1,h2,h3,h4,h5,h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}h1{font-size:2em}h1,h2{padding-bottom:.3em;border-bottom:1px solid #eaecef}h2{font-size:1.5em}h3{font-size:1.25em}h4{font-size:1em}h5{font-size:.875em}h6{font-size:.85em;color:#6a737d}ol,ul{padding-left:2em}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}li{word-wrap:break-all}li>p{margin-top:16px}li+li{margin-top:.25em}dl{padding:0}dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}dl dd{padding:0 16px;margin-bottom:16px}table{display:block;width:100%;overflow:auto}table th{font-weight:600}table td,table th{padding:6px 13px;border:1px solid #dfe2e5}table tr{background-color:#fff;border-top:1px solid #c6cbd1}table tr:nth-child(2n){background-color:#f6f8fa}img{max-width:100%;box-sizing:initial;background-color:#fff}img[align=right]{padding-left:20px}img[align=left]{padding-right:20px}code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}pre{word-wrap:normal}pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:0 0;border:0}.highlight{margin-bottom:16px}.highlight pre{margin-bottom:0;word-break:normal}.highlight pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:initial;border:0}p{min-height:28px}pre{margin-bottom:48px}.code-fence button{font-family:inherit;text-transform:none;position:relative;display:inline-block;padding:5px 16px;font-size:14px;font-weight:500;line-height:20px;white-space:nowrap;vertical-align:middle;cursor:pointer;user-select:none;border:1px solid;border-radius:6px;appearance:none;color:#24292e;background-color:#fafbfc;border-color:rgba(27,31,35,.15);box-shadow:0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 rgba(255,255,255,.25);transition:background-color .2s cubic-bezier(.3,0,.5,1)}.language-yaml{color:#0550ae}.language-typescript{color:#0550ae}.language-typescript .string{color:#0a3069}.language-typescript .number{color:#005cc5}.language-typescript .class-name{color:#24292f}.token.keyword{color:#d73a49}.token.language-javascript{color:#24292e}.token.language-javascript .function{color:#005cc5}.token.language-javascript .string{color:#032f62}.token.language-javascript .number{color:#005cc5}.token.language-javascript .keyword{color:#d73a49}.token.each{color:#d73a49}.token.punctuation{color:#24292e}.token.tag{color:#22863a}.token.attr-name{color:#6f42c1}.token.attr-value{color:#032f62}.token.operator{color:#d73a49}.token.comment{color:#6a737d}.token.function{color:#6f42c1}.token.string{color:#032f62}.token.each .language-javascript:last-child{color:#e36209}.language-css{color:#032f62}.language-css .selector{color:#22863a}.language-css .property{color:#005cc5}.code-fence{padding:24px 15px;border:1px solid #eaecef;border-bottom:0}main{box-sizing:border-box;max-width:980px;margin:0 auto;padding:45px}@media (max-width:767px){main{padding:15px}}input,textarea{font:inherit;background:#f4f4f4;border:0;border-bottom:1px solid #8d8d8d;padding:.75rem 1rem}input:focus,textarea:focus{outline:#0f62fe solid 2px;outline-offset:-2px}</style> </head> <body> <noscript>You need to enable JavaScript to run this app.</noscript> <script src="s.0f5b73f2.js"></script> </body> </html> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f261f8fa.css">
+	<link rel="modulepreload" href="/_app/start-ecdefbfb.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-f8ebb373.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-62f0adb9.js">
+	<link rel="modulepreload" href="/_app/pages/index.svelte-3fde95fe.js">
+	<link rel="modulepreload" href="/_app/chunks/FocusKey-6f50bd98.js">
+	<link rel="modulepreload" href="/_app/chunks/focus-key-27c10ffc.js"><script type="module">
+		import { start } from "/_app/start-ecdefbfb.js";
+		start({
+			target: document.querySelector("#svelte"),
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-62f0adb9.js"),
+						import("/_app/pages/index.svelte-3fde95fe.js")
+				],
+				url: new URL("http://sveltekit-prerender/"),
+				params: {}
+			}
+		});
+	</script>
+  </head>
+  <body>
+    <div id="svelte">
+
+
+<main class="markdown-body"><h1>svelte-focus-key</h1>
+<p><a href="https://npmjs.com/package/svelte-focus-key" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-focus-key.svg?style=for-the-badge&color=%23ff3e00" alt="NPM"></a></p>
+<blockquote><p>Svelte component and action to focus an element when pressing a key</p></blockquote>
+<p>The primary use case is to focus a search input when pressing the forward slash key (&quot;/&quot;).</p>
+<h2>Installation</h2>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token comment"># Yarn</span>
+<span class="token function">yarn</span> <span class="token function">add</span> -D svelte-focus-key
+
+<span class="token comment"># NPM</span>
+<span class="token function">npm</span> i -D svelte-focus-key
+
+<span class="token comment"># pnpm</span>
+<span class="token function">pnpm</span> i -D svelte-focus-key</code><!-- HTML_TAG_END --></pre>
+<h2>Usage</h2>
+<h3><code>FocusKey</code> component</h3>
+<p>Use the <a href="https://svelte.dev/docs#bind_element" rel="nofollow">bind:this</a> directive to pass the element to focus to the <code>FocusKey</code> component.</p>
+
+<input placeholder="Press &quot;/&quot; to focus">
+
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> FocusKey <span class="token keyword">from</span> <span class="token string">"svelte-focus-key"</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> element<span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "/" to focus'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+</code><!-- HTML_TAG_END --></pre>
+
+<h3>Custom focus key</h3>
+<p>The default focus key is the forward slash (<code>/</code>). Customize the key using the <code>key</code> prop.</p>
+
+<textarea placeholder="Press &quot;s&quot; to focus"></textarea>
+
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> FocusKey <span class="token keyword">from</span> <span class="token string">"svelte-focus-key"</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> textarea<span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>textarea<span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "s" to focus'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>textarea<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>s<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+</code><!-- HTML_TAG_END --></pre>
+
+<h3>Multiple focus keys</h3>
+<p>The <code>key</code> prop can also accept an array of keys.</p>
+
+<input placeholder="Press &quot;a&quot; or &quot;b&quot;">
+
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> FocusKey <span class="token keyword">from</span> <span class="token string">"svelte-focus-key"</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> node<span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>node<span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "a" or "b"'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>node<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+</code><!-- HTML_TAG_END --></pre>
+
+<h3>Select text on focus</h3>
+<p>Set <code>selectText</code> to <code>true</code> to select the text in the element when focusing.</p>
+
+<input value="Press &quot;e&quot; to focus" placeholder="Press &quot;e&quot; to focus">
+
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> FocusKey <span class="token keyword">from</span> <span class="token string">"svelte-focus-key"</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> input<span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+  <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>input<span class="token punctuation">&#125;</span></span>
+  <span class="token attr-name">value=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "e" to focus'</span><span class="token punctuation">&#125;</span></span>
+  <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "e" to focus'</span><span class="token punctuation">&#125;</span></span>
+<span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>input<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>e<span class="token punctuation">"</span></span> <span class="token attr-name">selectText</span> <span class="token punctuation">/></span></span>
+</code><!-- HTML_TAG_END --></pre>
+
+<h3><code>focusKey</code> action</h3>
+<p>This utility also provides a <a href="https://svelte.dev/docs#use_action" rel="nofollow">Svelte action</a>.</p>
+
+<input placeholder="Press &quot;k&quot; to focus">
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> focusKey <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"svelte-focus-key"</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name"><span class="token namespace">use:</span>focusKey=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">key</span><span class="token operator">:</span> <span class="token string">"k"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "k" to focus'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+</code><!-- HTML_TAG_END --></pre>
+
+<h2>API</h2>
+<h3>Props</h3>
+<table><thead><tr><th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Type</th>
+<th align="left">Default value</th></tr></thead>
+<tbody><tr><td align="left">element</td>
+<td align="left">HTML element to focus</td>
+<td align="left"><code>HTMLElement</code></td>
+<td align="left"><code>null</code></td></tr>
+<tr><td align="left">key</td>
+<td align="left">Key to trigger focus when pressed</td>
+<td align="left"><code>string</code> or <code>string[]</code></td>
+<td align="left"><code>&quot;/&quot;</code></td></tr>
+<tr><td align="left">selectText</td>
+<td align="left">Select element text when focusing</td>
+<td align="left"><code>boolean</code></td>
+<td align="left"><code>false</code></td></tr></tbody></table>
+<p>The <code>focusKey</code> action has the same props as <code>FocusKey</code> except for <code>element</code>.</p>
+</main>
+
+</div>
+  </body>
+</html>
