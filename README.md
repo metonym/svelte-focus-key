@@ -8,21 +8,14 @@ The primary use case is to focus a search input when pressing the forward slash 
 
 ## Installation
 
-**Yarn**
-
 ```bash
+# Yarn
 yarn add -D svelte-focus-key
-```
 
-**NPM**
-
-```bash
+# NPM
 npm i -D svelte-focus-key
-```
 
-**pnpm**
-
-```bash
+# pnpm
 pnpm i -D svelte-focus-key
 ```
 
