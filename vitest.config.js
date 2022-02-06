@@ -5,7 +5,6 @@ export default defineConfig({
   plugins: [
     svelte({
       hot: !process.env.VITEST,
-      compilerOptions: { accessors: true },
     }),
   ],
   test: {
