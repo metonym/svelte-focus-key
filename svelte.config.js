@@ -1,7 +1,7 @@
 import adapter from "@sveltejs/adapter-static";
 import { createConfig } from "sveldoc";
 
-export default createConfig({
+const config = await createConfig({
   name: "svelte-focus-key",
   kit: {
     paths: {
@@ -15,3 +15,5 @@ export default createConfig({
     template: "demo/_app.html",
   },
 });
+
+export default config;
