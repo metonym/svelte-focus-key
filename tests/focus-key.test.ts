@@ -1,3 +1,4 @@
+import { tick } from "svelte";
 import { test, expect, describe, afterEach } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { focusKey } from "../src";
@@ -48,14 +49,14 @@ describe("focus-key", () => {
     expect(document.activeElement).not.toEqual(input);
   });
 
-  test("Multiple focus keys", () => {
+  test("Multiple focus keys", async () => {
     document.body.innerHTML = `
       <input />
     `;
 
     const input = document.querySelector("input");
 
-    instance = focusKey(input, { key: ["s", "/"] });
+    instance = focusKey(input, { key: ["s", "/"], selectText: true });
 
     userEvent.keyboard("/");
     expect(document.activeElement).toEqual(input);
@@ -64,5 +65,15 @@ describe("focus-key", () => {
     userEvent.keyboard("s");
     expect(document.activeElement).toEqual(input);
     input.blur();
+
+    userEvent.keyboard("/");
+    expect(document.activeElement).toEqual(input);
+
+    userEvent.keyboard("text");
+    input.blur();
+
+    userEvent.keyboard("/");
+    expect(input.selectionStart).toEqual(0);
+    expect(input.selectionEnd).toEqual(4);
   });
 });

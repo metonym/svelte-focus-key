@@ -94,6 +94,7 @@ describe("FocusKey", () => {
 
     instance.$set({
       key: "y",
+      selectText: true,
     });
 
     await tick();
@@ -106,5 +107,11 @@ describe("FocusKey", () => {
 
     userEvent.keyboard("y");
     expect(input.value).toEqual("y");
+
+    input.blur();
+
+    userEvent.keyboard("y");
+    expect(input.selectionStart).toEqual(0);
+    expect(input.selectionEnd).toEqual(1);
   });
 });
