@@ -15,7 +15,7 @@
 <div>
   <button
     on:click={() => {
-      key = Array.isArray(key) ? "k" : ["/"];
+      key = key === "/" ? "k" : "/";
       selectText = !selectText;
     }}
   >
