@@ -14,7 +14,6 @@ export function focusKey(
   const keydown = (e: KeyboardEvent) => {
     if (
       keys.some((key) => key === e.key) &&
-      element != null &&
       document.activeElement?.tagName === "BODY" &&
       document.activeElement !== element
     ) {
