@@ -1,4 +1,3 @@
-import { tick } from "svelte";
 import { test, expect, describe, afterEach } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { focusKey } from "../src";
@@ -49,7 +48,7 @@ describe("focus-key", () => {
     expect(document.activeElement).not.toEqual(input);
   });
 
-  test("Multiple focus keys", async () => {
+  test("Multiple focus keys", () => {
     document.body.innerHTML = `
       <input />
     `;
