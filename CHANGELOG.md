@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - support a combination of keys (e.g., "command + k")
 - support option to customize selected text range (select all vs. cursor at end) -->
 
+## [0.3.1](https://github.com/metonym/svelte-focus-key/releases/tag/v0.3.1) - 2022-02-07
+
+- `focusKey` action should reflect updated actions
+
 ## [0.3.0](https://github.com/metonym/svelte-focus-key/releases/tag/v0.3.0) - 2022-01-24
 
 - support multiple keys (`key` props accepts a `string` or `string[]`)
