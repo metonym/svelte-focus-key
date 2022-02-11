@@ -100,6 +100,8 @@
 
   input,
   textarea {
+    width: calc(100% - 30px);
+    max-width: 420px;
     font: inherit;
     background: #f4f4f4;
     border: 0;
