@@ -1,17 +1,19 @@
-import { test, expect } from "vitest";
-import * as FocusKey from "../src";
+import { describe, it, expect } from "vitest";
+import * as API from "../src";
 import pkg from "../package.json";
 
-test("Library has 0 dependencies", () => {
-  // @ts-expect-error
-  expect(Object.keys(pkg.dependencies ?? {}).length).toEqual(0);
-});
+describe("Library", () => {
+  it("has 0 dependencies", () => {
+    // @ts-expect-error
+    expect(Object.keys(pkg.dependencies ?? {}).length).toEqual(0);
+  });
 
-test("API", () => {
-  expect(Object.keys(FocusKey)).toMatchInlineSnapshot(`
-    [
-      "default",
-      "focusKey",
-    ]
-  `);
+  it("has exports", () => {
+    expect(Object.keys(API)).toMatchInlineSnapshot(`
+      [
+        "default",
+        "focusKey",
+      ]
+    `);
+  });
 });

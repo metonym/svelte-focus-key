@@ -12,9 +12,7 @@ describe("focus-key", () => {
   });
 
   test("Default focus key '/'", () => {
-    document.body.innerHTML = `
-      <input />
-    `;
+    document.body.innerHTML = "<input />";
 
     const input = document.querySelector("input");
 
@@ -49,9 +47,7 @@ describe("focus-key", () => {
   });
 
   test("Multiple focus keys", () => {
-    document.body.innerHTML = `
-      <input />
-    `;
+    document.body.innerHTML = "<input />";
 
     const input = document.querySelector("input");
 
