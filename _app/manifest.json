@@ -1,15 +1,16 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-dc210932.js",
+    "file": "start-4f817bcd.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js"
+      "_vendor-9aa01de1.js"
     ],
     "dynamicImports": [
       "demo/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "demo/index.svelte",
+      "demo/FocusKeyActionUpdates.svelte",
       "demo/MultipleFocusKeys.svelte",
       "demo/SelectTextOnFocus.svelte",
       "demo/CustomFocusKey.svelte",
@@ -18,97 +19,107 @@
     ]
   },
   "demo/__layout.svelte": {
-    "file": "pages/__layout.svelte-62f0adb9.js",
+    "file": "pages/__layout.svelte-a62d74bc.js",
     "src": "demo/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js"
+      "_vendor-9aa01de1.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-f261f8fa.css"
+      "assets/pages/__layout.svelte-e3045cd8.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-9ea34e35.js",
+    "file": "error.svelte-51c6caf0.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js"
+      "_vendor-9aa01de1.js"
     ]
   },
   "demo/index.svelte": {
-    "file": "pages/index.svelte-3fde95fe.js",
+    "file": "pages/index.svelte-53db7bae.js",
     "src": "demo/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js",
-      "_FocusKey-6f50bd98.js",
-      "_focus-key-27c10ffc.js"
+      "_vendor-9aa01de1.js",
+      "_FocusKey-fa9f3b49.js",
+      "_focus-key-20064cb5.js"
+    ]
+  },
+  "demo/FocusKeyActionUpdates.svelte": {
+    "file": "pages/FocusKeyActionUpdates.svelte-ef90cdef.js",
+    "src": "demo/FocusKeyActionUpdates.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-9aa01de1.js",
+      "_focus-key-20064cb5.js"
     ]
   },
   "demo/MultipleFocusKeys.svelte": {
-    "file": "pages/MultipleFocusKeys.svelte-029450d4.js",
+    "file": "pages/MultipleFocusKeys.svelte-1c304bbd.js",
     "src": "demo/MultipleFocusKeys.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js",
-      "_FocusKey-6f50bd98.js"
+      "_vendor-9aa01de1.js",
+      "_FocusKey-fa9f3b49.js"
     ]
   },
   "demo/SelectTextOnFocus.svelte": {
-    "file": "pages/SelectTextOnFocus.svelte-804c7d23.js",
+    "file": "pages/SelectTextOnFocus.svelte-8e367467.js",
     "src": "demo/SelectTextOnFocus.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js",
-      "_FocusKey-6f50bd98.js"
+      "_vendor-9aa01de1.js",
+      "_FocusKey-fa9f3b49.js"
     ]
   },
   "demo/CustomFocusKey.svelte": {
-    "file": "pages/CustomFocusKey.svelte-7642e22f.js",
+    "file": "pages/CustomFocusKey.svelte-6aed1cb6.js",
     "src": "demo/CustomFocusKey.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js",
-      "_FocusKey-6f50bd98.js"
+      "_vendor-9aa01de1.js",
+      "_FocusKey-fa9f3b49.js"
     ]
   },
   "demo/FocusKeyAction.svelte": {
-    "file": "pages/FocusKeyAction.svelte-898acd89.js",
+    "file": "pages/FocusKeyAction.svelte-df7b757b.js",
     "src": "demo/FocusKeyAction.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js",
-      "_focus-key-27c10ffc.js"
+      "_vendor-9aa01de1.js",
+      "_focus-key-20064cb5.js"
     ]
   },
   "demo/Basic.svelte": {
-    "file": "pages/Basic.svelte-8f15f56a.js",
+    "file": "pages/Basic.svelte-9734f5c7.js",
     "src": "demo/Basic.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-f8ebb373.js",
-      "_FocusKey-6f50bd98.js"
+      "_vendor-9aa01de1.js",
+      "_FocusKey-fa9f3b49.js"
     ]
   },
-  "_vendor-f8ebb373.js": {
-    "file": "chunks/vendor-f8ebb373.js"
+  "_vendor-9aa01de1.js": {
+    "file": "chunks/vendor-9aa01de1.js"
   },
-  "_FocusKey-6f50bd98.js": {
-    "file": "chunks/FocusKey-6f50bd98.js",
+  "_FocusKey-fa9f3b49.js": {
+    "file": "chunks/FocusKey-fa9f3b49.js",
     "imports": [
-      "_vendor-f8ebb373.js"
+      "_vendor-9aa01de1.js"
     ]
   },
-  "_focus-key-27c10ffc.js": {
-    "file": "chunks/focus-key-27c10ffc.js"
+  "_focus-key-20064cb5.js": {
+    "file": "chunks/focus-key-20064cb5.js"
   }
 }

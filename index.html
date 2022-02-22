@@ -2,36 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Svelte component and action to focus an element when pressing a key"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/svelte-focus-key/_app/assets/pages/__layout.svelte-f261f8fa.css">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/start-dc210932.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/chunks/vendor-f8ebb373.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/pages/__layout.svelte-62f0adb9.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/pages/index.svelte-3fde95fe.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/chunks/FocusKey-6f50bd98.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/chunks/focus-key-27c10ffc.js"><script type="module">
-		import { start } from "/svelte-focus-key/_app/start-dc210932.js";
-		start({
-			target: document.querySelector("#svelte"),
-			paths: {"base":"/svelte-focus-key","assets":"/svelte-focus-key"},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [
-					import("/svelte-focus-key/_app/pages/__layout.svelte-62f0adb9.js"),
-						import("/svelte-focus-key/_app/pages/index.svelte-3fde95fe.js")
-				],
-				url: new URL("http://sveltekit-prerender/svelte-focus-key"),
-				params: {}
-			}
-		});
-	</script>
+	<link rel="stylesheet" href="/svelte-focus-key/_app/assets/pages/__layout.svelte-e3045cd8.css">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/start-4f817bcd.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/chunks/vendor-9aa01de1.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/pages/__layout.svelte-a62d74bc.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/pages/index.svelte-53db7bae.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/chunks/FocusKey-fa9f3b49.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/chunks/focus-key-20064cb5.js">
   </head>
   <body>
     <div id="svelte">
@@ -151,6 +134,26 @@
 <p>The <code>focusKey</code> action has the same props as <code>FocusKey</code> except for <code>element</code>.</p>
 </main>
 
-</div>
+
+		<script type="module" data-hydrate="ci3l1u">
+		import { start } from "/svelte-focus-key/_app/start-4f817bcd.js";
+		start({
+			target: document.querySelector('[data-hydrate="ci3l1u"]').parentNode,
+			paths: {"base":"/svelte-focus-key","assets":"/svelte-focus-key"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/svelte-focus-key/_app/pages/__layout.svelte-a62d74bc.js"),
+						import("/svelte-focus-key/_app/pages/index.svelte-53db7bae.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
   </body>
 </html>
