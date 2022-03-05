@@ -7,6 +7,9 @@ const config = await createConfig({
     paths: {
       base: process.env.NODE_ENV === "production" ? "/svelte-focus-key" : "",
     },
+    prerender: {
+      default: true
+    }
   },
   adapter: adapter(),
   files: {
