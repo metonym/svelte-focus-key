@@ -20,7 +20,7 @@
     "gh-pages": "^3.2.3",
     "github-markdown-css": "^5.1.0",
     "jsdom": "^19.0.0",
-    "sveldoc": "^0.3.0",
+    "sveldoc": "^0.4.0",
     "svelte": "^3.46.4",
     "svelte-preprocess": "^4.10.4",
     "svelte2tsx": "^0.5.6",
