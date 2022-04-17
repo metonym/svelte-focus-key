@@ -12,7 +12,7 @@ describe("FocusKey", () => {
     document.body.innerHTML = "";
   });
 
-  test("Default focus key '/'", () => {
+  test("Default focus key '/'", async () => {
     document.body.innerHTML = `
       <div id="target">
         <input />
@@ -29,18 +29,18 @@ describe("FocusKey", () => {
       },
     });
 
-    userEvent.keyboard("/");
+    await userEvent.keyboard("/");
     expect(document.activeElement).toEqual(input);
 
-    userEvent.keyboard("/");
+    await userEvent.keyboard("/");
     expect(input.value).toEqual("/");
     input.blur();
 
-    userEvent.keyboard("s");
+    await userEvent.keyboard("s");
     expect(document.activeElement).not.toEqual(input);
   });
 
-  test("Custom focus key 's'", () => {
+  test("Custom focus key 's'", async () => {
     document.body.innerHTML = `
       <div id="target">
         <input />
@@ -58,11 +58,11 @@ describe("FocusKey", () => {
       },
     });
 
-    userEvent.keyboard("s");
+    await userEvent.keyboard("s");
     expect(document.activeElement).toEqual(input);
     input.blur();
 
-    userEvent.keyboard("/");
+    await userEvent.keyboard("/");
     expect(document.activeElement).not.toEqual(input);
   });
 
@@ -84,11 +84,11 @@ describe("FocusKey", () => {
       },
     });
 
-    userEvent.keyboard("/");
+    await userEvent.keyboard("/");
     expect(document.activeElement).toEqual(input);
     input.blur();
 
-    userEvent.keyboard("s");
+    await userEvent.keyboard("s");
     expect(document.activeElement).toEqual(input);
     input.blur();
 
@@ -99,18 +99,18 @@ describe("FocusKey", () => {
 
     await tick();
 
-    userEvent.keyboard("/");
+    await userEvent.keyboard("/");
     expect(document.activeElement).not.toEqual(input);
 
-    userEvent.keyboard("y");
+    await userEvent.keyboard("y");
     expect(document.activeElement).toEqual(input);
 
-    userEvent.keyboard("y");
+    await userEvent.keyboard("y");
     expect(input.value).toEqual("y");
 
     input.blur();
 
-    userEvent.keyboard("y");
+    await userEvent.keyboard("y");
     expect(input.selectionStart).toEqual(0);
     expect(input.selectionEnd).toEqual(1);
   });
