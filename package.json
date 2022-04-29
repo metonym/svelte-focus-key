@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "next",
-    "@sveltejs/kit": "1.0.0-next.320",
+    "@sveltejs/kit": "1.0.0-next.324",
     "@testing-library/svelte": "^3.1.1",
     "@testing-library/user-event": "^14.1.1",
     "gh-pages": "^3.2.3",
@@ -24,8 +24,8 @@
     "svelte": "^3.47.0",
     "svelte-preprocess": "^4.10.6",
     "svelte2tsx": "^0.5.9",
-    "typescript": "^4.6.3",
-    "vitest": "^0.9.4"
+    "typescript": "^4.6.4",
+    "vitest": "^0.10.0"
   },
   "repository": {
     "type": "git",
