@@ -10,10 +10,17 @@ type FocusKeyAction = Action<
   FocusKeyOptions
 >;
 
-export const focusKey: FocusKeyAction = (element, options = {}) => {
-  let key = options.key || "/";
-  let keys = Array.isArray(key) ? key : [key];
-  let selectText = options.selectText === true;
+const setOptions = (options: FocusKeyOptions = {}) => {
+  const key = options.key || "/";
+
+  return {
+    keys: Array.isArray(key) ? key : [key],
+    selectText: options.selectText === true,
+  };
+};
+
+export const focusKey: FocusKeyAction = (element, options) => {
+  let { keys, selectText } = setOptions(options);
 
   const keydown = (e: KeyboardEvent) => {
     if (
@@ -30,10 +37,8 @@ export const focusKey: FocusKeyAction = (element, options = {}) => {
   document.body.addEventListener("keydown", keydown);
 
   return {
-    update(options = {}) {
-      key = options.key || "/";
-      keys = Array.isArray(key) ? key : [key];
-      selectText = options.selectText === true;
+    update(options) {
+      ({ keys, selectText } = setOptions(options));
       element.selectionStart = element.selectionEnd;
     },
     destroy() {
