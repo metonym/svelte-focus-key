@@ -20,7 +20,7 @@ describe("FocusKey", () => {
     `;
 
     const target = document.getElementById("target");
-    const input = document.querySelector("input");
+    const input = document.querySelector("input")!;
 
     instance = new FocusKey({
       target,
@@ -48,7 +48,7 @@ describe("FocusKey", () => {
     `;
 
     const target = document.getElementById("target");
-    const input = document.querySelector("input");
+    const input = document.querySelector("input")!;
 
     instance = new FocusKey({
       target,
@@ -74,7 +74,7 @@ describe("FocusKey", () => {
     `;
 
     const target = document.getElementById("target");
-    const input = document.querySelector("input");
+    const input = document.querySelector("input")!;
 
     instance = new FocusKey({
       target,

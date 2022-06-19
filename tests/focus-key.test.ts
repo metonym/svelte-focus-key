@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { focusKey } from "../src";
 
 describe("focus-key", () => {
-  let instance: ReturnType<typeof focusKey> = null;
+  let instance: null | ReturnType<typeof focusKey> = null;
 
   afterEach(() => {
     instance = null;
@@ -13,7 +13,7 @@ describe("focus-key", () => {
   test("Default focus key '/'", async () => {
     document.body.innerHTML = "<input />";
 
-    const input = document.querySelector("input");
+    const input = document.querySelector("input")!;
 
     instance = focusKey(input);
 
@@ -33,7 +33,7 @@ describe("focus-key", () => {
       <input />
     `;
 
-    const input = document.querySelector("input");
+    const input = document.querySelector("input")!;
 
     instance = focusKey(input, { key: "s" });
 
@@ -48,7 +48,7 @@ describe("focus-key", () => {
   test("Multiple focus keys", async () => {
     document.body.innerHTML = "<input />";
 
-    const input = document.querySelector("input");
+    const input = document.querySelector("input")!;
 
     instance = focusKey(input, { key: ["s", "/"], selectText: true });
 
