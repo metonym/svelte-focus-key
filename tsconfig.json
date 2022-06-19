@@ -8,5 +8,5 @@
       "svelte-focus-key": ["src"]
     }
   },
-  "include": ["src/*", "demo/*", "test/*"]
+  "include": ["src/*", "demo/*", "tests/*"]
 }
