@@ -1,0 +1,125 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-dbab0d1f.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-b58510fc.js"
+    ],
+    "dynamicImports": [
+      "demo/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "demo/Basic.svelte",
+      "demo/CustomFocusKey.svelte",
+      "demo/FocusKeyAction.svelte",
+      "demo/FocusKeyActionUpdates.svelte",
+      "demo/MultipleFocusKeys.svelte",
+      "demo/SelectTextOnFocus.svelte",
+      "demo/index.svelte"
+    ]
+  },
+  "demo/__layout.svelte": {
+    "file": "pages/__layout.svelte-c7ec4223.js",
+    "src": "demo/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-e3045cd8.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-1147fdbf.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js"
+    ]
+  },
+  "demo/Basic.svelte": {
+    "file": "pages/Basic.svelte-49eda5ca.js",
+    "src": "demo/Basic.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js",
+      "_FocusKey-cea9a6f6.js"
+    ]
+  },
+  "demo/CustomFocusKey.svelte": {
+    "file": "pages/CustomFocusKey.svelte-a47f26e3.js",
+    "src": "demo/CustomFocusKey.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js",
+      "_FocusKey-cea9a6f6.js"
+    ]
+  },
+  "demo/FocusKeyAction.svelte": {
+    "file": "pages/FocusKeyAction.svelte-b9f262f7.js",
+    "src": "demo/FocusKeyAction.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js",
+      "_focus-key-b467e15b.js"
+    ]
+  },
+  "demo/FocusKeyActionUpdates.svelte": {
+    "file": "pages/FocusKeyActionUpdates.svelte-688aed60.js",
+    "src": "demo/FocusKeyActionUpdates.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js",
+      "_focus-key-b467e15b.js"
+    ]
+  },
+  "demo/MultipleFocusKeys.svelte": {
+    "file": "pages/MultipleFocusKeys.svelte-1eaa9b24.js",
+    "src": "demo/MultipleFocusKeys.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js",
+      "_FocusKey-cea9a6f6.js"
+    ]
+  },
+  "demo/SelectTextOnFocus.svelte": {
+    "file": "pages/SelectTextOnFocus.svelte-90978c45.js",
+    "src": "demo/SelectTextOnFocus.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js",
+      "_FocusKey-cea9a6f6.js"
+    ]
+  },
+  "demo/index.svelte": {
+    "file": "pages/index.svelte-688ae827.js",
+    "src": "demo/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-b58510fc.js",
+      "_FocusKey-cea9a6f6.js",
+      "_focus-key-b467e15b.js"
+    ]
+  },
+  "_index-b58510fc.js": {
+    "file": "chunks/index-b58510fc.js"
+  },
+  "_FocusKey-cea9a6f6.js": {
+    "file": "chunks/FocusKey-cea9a6f6.js",
+    "imports": [
+      "_index-b58510fc.js"
+    ]
+  },
+  "_focus-key-b467e15b.js": {
+    "file": "chunks/focus-key-b467e15b.js"
+  }
+}
