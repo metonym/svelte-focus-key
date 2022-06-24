@@ -6,18 +6,18 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - uses: actions/cache@v2
         id: yarn-cache
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Build, test, and package the library
+      - name: Build and test the library
         run: |
           yarn
-          yarn build & yarn test & yarn package
+          yarn build
+          yarn test
