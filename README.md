@@ -37,7 +37,6 @@ Use the [bind:this](https://svelte.dev/docs#bind_element) directive to pass the 
 <input bind:this={element} placeholder={'Press "/" to focus'} />
 
 <FocusKey {element} />
-
 ```
 
 <!-- example-end -->
@@ -58,7 +57,6 @@ The default focus key is the forward slash (`/`). Customize the key using the `k
 <textarea bind:this={textarea} placeholder={'Press "s" to focus'} />
 
 <FocusKey element={textarea} key="s" />
-
 ```
 
 <!-- example-end -->
@@ -79,7 +77,6 @@ The `key` prop can also accept an array of keys.
 <input bind:this={node} placeholder={'Press "a" or "b"'} />
 
 <FocusKey element={node} key={["a", "b"]} />
-
 ```
 
 <!-- example-end -->
@@ -104,7 +101,6 @@ Set `selectText` to `true` to select the text in the element when focusing.
 />
 
 <FocusKey element={input} key="e" selectText />
-
 ```
 
 <!-- example-end -->
@@ -121,7 +117,6 @@ This utility also provides a [Svelte action](https://svelte.dev/docs#use_action)
 </script>
 
 <input use:focusKey={{ key: "k" }} placeholder={'Press "k" to focus'} />
-
 ```
 
 <!-- example-end -->
