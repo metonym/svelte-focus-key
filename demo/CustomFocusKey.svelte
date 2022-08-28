@@ -1,9 +1,9 @@
 <script>
   import FocusKey from "svelte-focus-key";
 
-  let textarea;
+  let element;
 </script>
 
-<textarea bind:this={textarea} placeholder={'Press "s" to focus'} />
+<textarea bind:this={element} placeholder={'Press "s" to focus'} />
 
-<FocusKey element={textarea} key="s" />
+<FocusKey element={element} key="s" />

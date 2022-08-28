@@ -1,9 +1,9 @@
 <script>
   import FocusKey from "svelte-focus-key";
 
-  let node;
+  let element;
 </script>
 
-<input bind:this={node} placeholder={'Press "a" or "b"'} />
+<input bind:this={element} placeholder={'Press "a" or "b"'} />
 
-<FocusKey element={node} key={["a", "b"]} />
+<FocusKey element={element} key={["a", "b"]} />
