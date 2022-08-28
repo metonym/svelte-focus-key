@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-dbab0d1f.js",
+    "file": "_app/immutable/start-8aa7b7c4.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-b58510fc.js"
+      "_index-f226af85.js"
     ],
     "dynamicImports": [
       "demo/__layout.svelte",
@@ -19,107 +19,111 @@
     ]
   },
   "demo/__layout.svelte": {
-    "file": "pages/__layout.svelte-c7ec4223.js",
+    "file": "_app/immutable/pages/__layout.svelte-167a6281.js",
     "src": "demo/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js"
+      "_index-f226af85.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-e3045cd8.css"
+      "_app/immutable/assets/__layout-57fc442c.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-1147fdbf.js",
+    "file": "_app/immutable/error.svelte-6876e8ad.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js"
+      "_index-f226af85.js"
     ]
   },
   "demo/Basic.svelte": {
-    "file": "pages/Basic.svelte-49eda5ca.js",
+    "file": "_app/immutable/pages/Basic.svelte-806fcca9.js",
     "src": "demo/Basic.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js",
-      "_FocusKey-cea9a6f6.js"
+      "_index-f226af85.js",
+      "_FocusKey-4f072316.js"
     ]
   },
   "demo/CustomFocusKey.svelte": {
-    "file": "pages/CustomFocusKey.svelte-a47f26e3.js",
+    "file": "_app/immutable/pages/CustomFocusKey.svelte-b5d42a95.js",
     "src": "demo/CustomFocusKey.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js",
-      "_FocusKey-cea9a6f6.js"
+      "_index-f226af85.js",
+      "_FocusKey-4f072316.js"
     ]
   },
   "demo/FocusKeyAction.svelte": {
-    "file": "pages/FocusKeyAction.svelte-b9f262f7.js",
+    "file": "_app/immutable/pages/FocusKeyAction.svelte-50967519.js",
     "src": "demo/FocusKeyAction.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js",
-      "_focus-key-b467e15b.js"
+      "_index-f226af85.js",
+      "_focus-key-9ab4ca71.js"
     ]
   },
   "demo/FocusKeyActionUpdates.svelte": {
-    "file": "pages/FocusKeyActionUpdates.svelte-688aed60.js",
+    "file": "_app/immutable/pages/FocusKeyActionUpdates.svelte-b8d28677.js",
     "src": "demo/FocusKeyActionUpdates.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js",
-      "_focus-key-b467e15b.js"
+      "_index-f226af85.js",
+      "_focus-key-9ab4ca71.js"
     ]
   },
   "demo/MultipleFocusKeys.svelte": {
-    "file": "pages/MultipleFocusKeys.svelte-1eaa9b24.js",
+    "file": "_app/immutable/pages/MultipleFocusKeys.svelte-ca64fcdd.js",
     "src": "demo/MultipleFocusKeys.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js",
-      "_FocusKey-cea9a6f6.js"
+      "_index-f226af85.js",
+      "_FocusKey-4f072316.js"
     ]
   },
   "demo/SelectTextOnFocus.svelte": {
-    "file": "pages/SelectTextOnFocus.svelte-90978c45.js",
+    "file": "_app/immutable/pages/SelectTextOnFocus.svelte-c49d5959.js",
     "src": "demo/SelectTextOnFocus.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js",
-      "_FocusKey-cea9a6f6.js"
+      "_index-f226af85.js",
+      "_FocusKey-4f072316.js"
     ]
   },
   "demo/index.svelte": {
-    "file": "pages/index.svelte-688ae827.js",
+    "file": "_app/immutable/pages/index.svelte-c60445d0.js",
     "src": "demo/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-b58510fc.js",
-      "_FocusKey-cea9a6f6.js",
-      "_focus-key-b467e15b.js"
+      "_index-f226af85.js",
+      "_FocusKey-4f072316.js",
+      "_focus-key-9ab4ca71.js"
     ]
   },
-  "_index-b58510fc.js": {
-    "file": "chunks/index-b58510fc.js"
+  "_index-f226af85.js": {
+    "file": "_app/immutable/chunks/index-f226af85.js"
   },
-  "_FocusKey-cea9a6f6.js": {
-    "file": "chunks/FocusKey-cea9a6f6.js",
+  "_FocusKey-4f072316.js": {
+    "file": "_app/immutable/chunks/FocusKey-4f072316.js",
     "imports": [
-      "_index-b58510fc.js"
+      "_index-f226af85.js"
     ]
   },
-  "_focus-key-b467e15b.js": {
-    "file": "chunks/focus-key-b467e15b.js"
+  "_focus-key-9ab4ca71.js": {
+    "file": "_app/immutable/chunks/focus-key-9ab4ca71.js"
+  },
+  "demo/__layout.css": {
+    "file": "_app/immutable/assets/__layout-57fc442c.css",
+    "src": "demo/__layout.css"
   }
 }

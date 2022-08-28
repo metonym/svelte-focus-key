@@ -8,13 +8,13 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/svelte-focus-key/_app/immutable/assets/pages/__layout.svelte-e3045cd8.css">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/start-dbab0d1f.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/chunks/index-b58510fc.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/pages/__layout.svelte-c7ec4223.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/pages/index.svelte-688ae827.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/chunks/FocusKey-cea9a6f6.js">
-	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/chunks/focus-key-b467e15b.js">
+	<link href="/svelte-focus-key/_app/immutable/assets/__layout-57fc442c.css" rel="stylesheet">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/start-8aa7b7c4.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/chunks/index-f226af85.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/pages/__layout.svelte-167a6281.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/pages/index.svelte-c60445d0.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/chunks/FocusKey-4f072316.js">
+	<link rel="modulepreload" href="/svelte-focus-key/_app/immutable/chunks/focus-key-9ab4ca71.js">
   </head>
   <body>
     <div>
@@ -47,8 +47,7 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "/" to focus'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
-</code><!-- HTML_TAG_END --></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre>
 
 <h3>Custom focus key</h3>
 <p>The default focus key is the forward slash (<code>/</code>). Customize the key using the <code>key</code> prop.</p>
@@ -58,13 +57,12 @@
 <pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> FocusKey <span class="token keyword">from</span> <span class="token string">"svelte-focus-key"</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">let</span> textarea<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> element<span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>textarea<span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "s" to focus'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "s" to focus'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>textarea<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>s<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-</code><!-- HTML_TAG_END --></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>s<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre>
 
 <h3>Multiple focus keys</h3>
 <p>The <code>key</code> prop can also accept an array of keys.</p>
@@ -74,13 +72,12 @@
 <pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> FocusKey <span class="token keyword">from</span> <span class="token string">"svelte-focus-key"</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">let</span> node<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> element<span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>node<span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "a" or "b"'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name"><span class="token namespace">bind:</span>this=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "a" or "b"'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>node<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
-</code><!-- HTML_TAG_END --></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre>
 
 <h3>Select text on focus</h3>
 <p>Set <code>selectText</code> to <code>true</code> to select the text in the element when focusing.</p>
@@ -99,8 +96,7 @@
   <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "e" to focus'</span><span class="token punctuation">&#125;</span></span>
 <span class="token punctuation">/></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>input<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>e<span class="token punctuation">"</span></span> <span class="token attr-name">selectText</span> <span class="token punctuation">/></span></span>
-</code><!-- HTML_TAG_END --></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>FocusKey</span> <span class="token attr-name">element=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>input<span class="token punctuation">&#125;</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>e<span class="token punctuation">"</span></span> <span class="token attr-name">selectText</span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre>
 
 <h3><code>focusKey</code> action</h3>
 <p>This utility also provides a <a href="https://svelte.dev/docs#use_action" rel="nofollow">Svelte action</a>.</p>
@@ -110,8 +106,7 @@
   <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> focusKey <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"svelte-focus-key"</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name"><span class="token namespace">use:</span>focusKey=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">key</span><span class="token operator">:</span> <span class="token string">"k"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "k" to focus'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span>
-</code><!-- HTML_TAG_END --></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name"><span class="token namespace">use:</span>focusKey=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">key</span><span class="token operator">:</span> <span class="token string">"k"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span></span> <span class="token attr-name">placeholder=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token string">'Press "k" to focus'</span><span class="token punctuation">&#125;</span></span> <span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre>
 
 <h2>API</h2>
 <h3>Props</h3>
@@ -135,10 +130,13 @@
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="ci3l1u">
-		import { start } from "/svelte-focus-key/_app/immutable/start-dbab0d1f.js";
+		<script type="module" data-sveltekit-hydrate="jqyk5u">
+		import { set_public_env, start } from "/svelte-focus-key/_app/immutable/start-8aa7b7c4.js";
+
+		set_public_env({});
+
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="ci3l1u"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="jqyk5u"]').parentNode,
 			paths: {"base":"/svelte-focus-key","assets":"/svelte-focus-key"},
 			session: {},
 			route: true,
