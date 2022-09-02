@@ -1,13 +1,13 @@
 <script>
   import FocusKey from "svelte-focus-key";
 
-  let element;
+  let input;
 </script>
 
 <input
-  bind:this={element}
+  bind:this={input}
   value={'Press "e" to focus'}
   placeholder={'Press "e" to focus'}
 />
 
-<FocusKey {element} key="e" selectText />
+<FocusKey element={input} key="e" selectText />
