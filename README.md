@@ -25,7 +25,7 @@ pnpm i -D svelte-focus-key
 
 Use the [bind:this](https://svelte.dev/docs#bind_element) directive to pass the element to focus to the `FocusKey` component.
 
-<!-- example-start demo/Basic.svelte -->
+<!-- example-start examples/Basic.svelte -->
 
 ```svelte
 <script>
@@ -45,18 +45,18 @@ Use the [bind:this](https://svelte.dev/docs#bind_element) directive to pass the 
 
 The default focus key is the forward slash (`/`). Customize the key using the `key` prop.
 
-<!-- example-start demo/CustomFocusKey.svelte -->
+<!-- example-start examples/CustomFocusKey.svelte -->
 
 ```svelte
 <script>
   import FocusKey from "svelte-focus-key";
 
-  let textarea;
+  let element;
 </script>
 
-<textarea bind:this={textarea} placeholder={'Press "s" to focus'} />
+<textarea bind:this={element} placeholder={'Press "s" to focus'} />
 
-<FocusKey element={textarea} key="s" />
+<FocusKey {element} key="s" />
 ```
 
 <!-- example-end -->
@@ -65,18 +65,18 @@ The default focus key is the forward slash (`/`). Customize the key using the `k
 
 The `key` prop can also accept an array of keys.
 
-<!-- example-start demo/MultipleFocusKeys.svelte -->
+<!-- example-start examples/MultipleFocusKeys.svelte -->
 
 ```svelte
 <script>
   import FocusKey from "svelte-focus-key";
 
-  let node;
+  let element;
 </script>
 
-<input bind:this={node} placeholder={'Press "a" or "b"'} />
+<input bind:this={element} placeholder={'Press "a" or "b"'} />
 
-<FocusKey element={node} key={["a", "b"]} />
+<FocusKey {element} key={["a", "b"]} />
 ```
 
 <!-- example-end -->
@@ -85,22 +85,22 @@ The `key` prop can also accept an array of keys.
 
 Set `selectText` to `true` to select the text in the element when focusing.
 
-<!-- example-start demo/SelectTextOnFocus.svelte -->
+<!-- example-start examples/SelectTextOnFocus.svelte -->
 
 ```svelte
 <script>
   import FocusKey from "svelte-focus-key";
 
-  let input;
+  let element;
 </script>
 
 <input
-  bind:this={input}
+  bind:this={element}
   value={'Press "e" to focus'}
   placeholder={'Press "e" to focus'}
 />
 
-<FocusKey element={input} key="e" selectText />
+<FocusKey {element} key="e" selectText />
 ```
 
 <!-- example-end -->
@@ -109,7 +109,7 @@ Set `selectText` to `true` to select the text in the element when focusing.
 
 This utility also provides a [Svelte action](https://svelte.dev/docs#use_action).
 
-<!-- example-start demo/FocusKeyAction.svelte -->
+<!-- example-start examples/FocusKeyAction.svelte -->
 
 ```svelte
 <script>
@@ -132,6 +132,14 @@ This utility also provides a [Svelte action](https://svelte.dev/docs#use_action)
 | selectText | Select element text when focusing | `boolean`              | `false`       |
 
 The `focusKey` action has the same props as `FocusKey` except for `element`.
+
+## Changelog
+
+[Changelog](./CHANGELOG.md)
+
+## License
+
+[MIT](./LICENSE)
 
 [npm]: https://img.shields.io/npm/v/svelte-focus-key.svg?style=for-the-badge&color=%23ff3e00
 [npm-url]: https://npmjs.com/package/svelte-focus-key

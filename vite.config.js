@@ -1,8 +1,3 @@
-import { sveltekit } from "@sveltejs/kit/vite";
-import { createViteConfig } from "sveldoc";
-import svelteConfig from "./svelte.config.js";
+import { defineConfig } from "sveldoc";
 
-export default createViteConfig(svelteConfig, {
-  name: "svelte-focus-key",
-  plugins: [sveltekit()],
-});
+export default defineConfig();

@@ -1,5 +1,5 @@
+node_modules
+dist
+package
 .DS_Store
-/.svelte-kit
-/build
-/package
-/node_modules
+*.svelte.html
