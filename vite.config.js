@@ -1,3 +1,3 @@
-import { createViteConfig } from "sveldoc";
+import { defineConfig } from "sveldoc";
 
-export default createViteConfig();
+export default defineConfig();
