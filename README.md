@@ -143,5 +143,3 @@ The `focusKey` action has the same props as `FocusKey` except for `element`.
 
 [npm]: https://img.shields.io/npm/v/svelte-focus-key.svg?style=for-the-badge&color=%23ff3e00
 [npm-url]: https://npmjs.com/package/svelte-focus-key
-
-
