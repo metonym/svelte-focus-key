@@ -1161,10 +1161,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-sveldoc@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/sveldoc/-/sveldoc-0.9.0.tgz#d5461c0743bd468c1a6584b005907d404bd40d63"
-  integrity sha512-03rJhC2mSV7JDovnvfAeQVQZmUWh+4YjENEGUjaVM14DqTOSTGU7He0zr77zy/hu32LcNr8ZH0hdcUpz/gtm9A==
+sveldoc@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/sveldoc/-/sveldoc-0.10.0.tgz#f594622f0ea1b0f8ca75427f758008248be82b17"
+  integrity sha512-kJPyBDQA8Dzk2P25k6vwOlHZ9T96PeEPD1x6cSWYAk8StuD9Z9NDzHwB4I4v+KOZ8QK/OWV9lghK63tQEp76jQ==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^1.0.4"
     fdir "^5.2.0"
