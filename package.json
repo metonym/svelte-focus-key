@@ -17,7 +17,7 @@
     "@testing-library/svelte": "^3.2.1",
     "@testing-library/user-event": "^14.4.3",
     "jsdom": "^20.0.0",
-    "sveldoc": "^0.10.0",
+    "sveldoc": "^0.10.1",
     "vite": "^3.0.9",
     "vitest": "^0.22.1"
   },
