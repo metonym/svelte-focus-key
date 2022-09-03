@@ -1,10 +1,11 @@
 import { test, expect, describe, afterEach } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { tick } from "svelte";
+import type { SvelteComponent } from "svelte";
 import { default as FocusKey } from "../src";
 
 describe("FocusKey", () => {
-  let instance: FocusKey = null;
+  let instance: null | SvelteComponent = null;
 
   afterEach(() => {
     instance?.$destroy();
@@ -19,7 +20,7 @@ describe("FocusKey", () => {
       </div>
     `;
 
-    const target = document.getElementById("target");
+    const target = document.getElementById("target")!;
     const input = document.querySelector("input")!;
 
     instance = new FocusKey({
@@ -47,7 +48,7 @@ describe("FocusKey", () => {
       </div>
     `;
 
-    const target = document.getElementById("target");
+    const target = document.getElementById("target")!;
     const input = document.querySelector("input")!;
 
     instance = new FocusKey({
@@ -73,7 +74,7 @@ describe("FocusKey", () => {
       </div>
     `;
 
-    const target = document.getElementById("target");
+    const target = document.getElementById("target")!;
     const input = document.querySelector("input")!;
 
     instance = new FocusKey({
