@@ -21,10 +21,18 @@ const setOptions = (options: FocusKeyOptions = {}) => {
 
 export const focusKey: FocusKeyAction = (element, options) => {
   let { keys, selectText } = setOptions(options);
+  let pressedKeys: string[] = [];
 
   const keydown = (e: KeyboardEvent) => {
+    pressedKeys = [...pressedKeys, e.key];
+  };
+
+  const keyup = (e: KeyboardEvent) => {
+    const currentKey = pressedKeys.join("+");
+
     if (
-      keys.some((key) => key === e.key) &&
+      keys.some((key) => key === currentKey) &&
+      element !== null &&
       document.activeElement?.tagName === "BODY" &&
       document.activeElement !== element
     ) {
@@ -32,9 +40,12 @@ export const focusKey: FocusKeyAction = (element, options) => {
       element.focus();
       if (selectText) element.select();
     }
+
+    pressedKeys = [];
   };
 
   document.body.addEventListener("keydown", keydown);
+  document.body.addEventListener("keyup", keyup);
 
   return {
     update(options) {
@@ -43,6 +54,7 @@ export const focusKey: FocusKeyAction = (element, options) => {
     },
     destroy() {
       document.body.removeEventListener("keydown", keydown);
+      document.body.removeEventListener("keyup", keyup);
     },
   };
 };

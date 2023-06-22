@@ -81,6 +81,26 @@ The `key` prop can also accept an array of keys.
 
 <!-- example-end -->
 
+### Combination of keys
+
+A combination of keys should be separated by a `+`.
+
+<!-- example-start demo/ComboKeys.svelte -->
+
+```svelte
+<script>
+  import FocusKey from "svelte-focus-key";
+
+  let element;
+</script>
+
+<input bind:this={element} placeholder={'Press "⌘+k" to focus'} />
+
+<FocusKey {element} key="Meta+k" />
+```
+
+<!-- example-end -->
+
 ### Select text on focus
 
 Set `selectText` to `true` to select the text in the element when focusing.
@@ -116,7 +136,7 @@ This utility also provides a [Svelte action](https://svelte.dev/docs#use_action)
   import { focusKey } from "svelte-focus-key";
 </script>
 
-<input use:focusKey={{ key: "k" }} placeholder={'Press "k" to focus'} />
+<input use:focusKey={{ key: "q" }} placeholder={'Press "q" to focus'} />
 ```
 
 <!-- example-end -->

@@ -15,13 +15,20 @@
   export let selectText = false;
 
   $: keys = Array.isArray(key) ? key : [key];
+
+  let pressedKeys: string[] = [];
 </script>
 
 <svelte:body
   on:keydown={(e) => {
+    pressedKeys = [...pressedKeys, e.key];
+  }}
+  on:keyup={(e) => {
+    const currentKey = pressedKeys.join("+");
+
     if (
-      keys.some((key) => key === e.key) &&
-      element != null &&
+      keys.some((key) => key === currentKey) &&
+      element !== null &&
       document.activeElement?.tagName === "BODY" &&
       document.activeElement !== element
     ) {
@@ -29,4 +36,7 @@
       element.focus();
       if (selectText) element.select();
     }
-  }} />
+
+    pressedKeys = [];
+  }}
+/>
