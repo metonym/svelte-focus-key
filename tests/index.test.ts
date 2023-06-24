@@ -1,6 +1,6 @@
-import { test, expect } from "vitest";
+import { expect, test } from "vitest";
+import * as pkg from "../package.json";
 import * as API from "../src";
-import pkg from "../package.json";
 
 test("Library has 0 dependencies", () => {
   // @ts-expect-error

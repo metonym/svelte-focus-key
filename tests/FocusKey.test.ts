@@ -1,10 +1,10 @@
-import { test, expect, describe, afterEach } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { tick } from "svelte";
-import { default as FocusKey } from "../src";
+import { default as FocusKey } from "svelte-focus-key";
+import { afterEach, describe, expect, test } from "vitest";
 
 describe("FocusKey", () => {
-  let instance: FocusKey = null;
+  let instance: null | FocusKey = null;
 
   afterEach(() => {
     instance?.$destroy();
@@ -19,7 +19,7 @@ describe("FocusKey", () => {
       </div>
     `;
 
-    const target = document.getElementById("target");
+    const target = document.getElementById("target")!;
     const input = document.querySelector("input")!;
 
     instance = new FocusKey({
@@ -47,7 +47,7 @@ describe("FocusKey", () => {
       </div>
     `;
 
-    const target = document.getElementById("target");
+    const target = document.getElementById("target")!;
     const input = document.querySelector("input")!;
 
     instance = new FocusKey({
@@ -73,7 +73,7 @@ describe("FocusKey", () => {
       </div>
     `;
 
-    const target = document.getElementById("target");
+    const target = document.getElementById("target")!;
     const input = document.querySelector("input")!;
 
     instance = new FocusKey({
@@ -113,5 +113,27 @@ describe("FocusKey", () => {
     await userEvent.keyboard("y");
     expect(input.selectionStart).toEqual(0);
     expect(input.selectionEnd).toEqual(1);
+  });
+
+  test("Combo keys", async () => {
+    document.body.innerHTML = `
+      <div id="target">
+        <input />
+      </div>
+    `;
+
+    const target = document.getElementById("target")!;
+    const input = document.querySelector("input")!;
+
+    instance = new FocusKey({
+      target,
+      props: {
+        element: input,
+        key: ["Meta+k"],
+      },
+    });
+
+    await userEvent.keyboard("{meta>}{k}");
+    expect(document.activeElement).toEqual(input);
   });
 });

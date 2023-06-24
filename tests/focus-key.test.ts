@@ -1,5 +1,5 @@
-import { test, expect, describe, afterEach } from "vitest";
 import userEvent from "@testing-library/user-event";
+import { afterEach, describe, expect, test } from "vitest";
 import { focusKey } from "../src";
 
 describe("focus-key", () => {
@@ -29,9 +29,7 @@ describe("focus-key", () => {
   });
 
   test("Custom focus key 's'", async () => {
-    document.body.innerHTML = `
-      <input />
-    `;
+    document.body.innerHTML = "<input />";
 
     const input = document.querySelector("input")!;
 
@@ -67,6 +65,24 @@ describe("focus-key", () => {
     input.blur();
 
     await userEvent.keyboard("/");
+    expect(input.selectionStart).toEqual(0);
+    expect(input.selectionEnd).toEqual(4);
+  });
+
+  test("Combo keys", async () => {
+    document.body.innerHTML = "<input />";
+
+    const input = document.querySelector("input")!;
+
+    instance = focusKey(input, { key: ["Meta+k"], selectText: true });
+
+    await userEvent.keyboard("{meta>}{k}");
+    expect(document.activeElement).toEqual(input);
+
+    await userEvent.keyboard("text");
+    input.blur();
+
+    await userEvent.keyboard("{meta>}{k}");
     expect(input.selectionStart).toEqual(0);
     expect(input.selectionEnd).toEqual(4);
   });
